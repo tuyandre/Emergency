@@ -20,10 +20,10 @@
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-road"></i>
-              <span class="label label-success">4</span>
+              <span class="label label-success">{{ \App\Criminals::where('type','roads')->count() }}</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 4 Road Accident</li>
+              <li class="header">You have {{ \App\Criminals::where('type','roads')->count() }} Road Accident</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -102,10 +102,10 @@
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-balance-scale"></i>
-              <span class="label label-warning">10</span>
+              <span class="label label-warning">{{ \App\Criminals::where('type','criminals')->count() }}</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 Criminals</li>
+              <li class="header">You have {{ \App\Criminals::where('type','criminals')->count() }} Criminals</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -147,10 +147,10 @@
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-fire-extinguisher"></i>
-              <span class="label label-danger">9</span>
+              <span class="label label-danger">{{ \App\Criminals::where('type','fires')->count() }}</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 9 Fire Accident</li>
+              <li class="header">You have{{ \App\Criminals::where('type','fires')->count() }} Fire Accident</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">

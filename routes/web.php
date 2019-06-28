@@ -176,6 +176,43 @@ Route::prefix('admin/')->group(/**
          'as' => 'reports.populations'
       ]);
 
+      //generate pdf from database
+
+      Route::post('reports/population', [
+         'uses' => 'ReportsController@getPopulations',
+         'as' => 'populations.pdf'
+      ]);
+      Route::post('reports/Road', [
+         'uses' => 'ReportsController@getRoads',
+         'as' => 'roads.pdf'
+      ]);
+
+      Route::post('reports/Fire', [
+         'uses' => 'ReportsController@getFires',
+         'as' => 'fires.pdf'
+      ]);
+      Route::post('reports/Criminal', [
+         'uses' => 'ReportsController@getCriminals',
+         'as' => 'criminals.pdf'
+      ]);
 
 
+
+      Route::get('criminals/pdf', [
+         'uses' => 'ReportsController@criminalsPdf',
+         'as' => 'criminalsPdf'
+      ]);
+
+      Route::get('roads/pdf', [
+         'uses' => 'ReportsController@RoadsPdf',
+         'as' => 'roadsPdf'
+      ]);
+      Route::get('FIRES/pdf', [
+         'uses' => 'ReportsController@FiresPdf',
+         'as' => 'firesPdf'
+      ]);
+      Route::get('populations/pdf', [
+         'uses' => 'ReportsController@PopulationsPdf',
+         'as' => 'populationsPdf'
+      ]);
    });

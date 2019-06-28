@@ -11,7 +11,7 @@
 			<!-- small box -->
 			<div class="small-box bg-aqua">
 				<div class="inner">
-					<h3>150</h3>
+					<h3>{{ \App\Populations::count() }}</h3>
 
 					<p>All Peoples</p>
 				</div>
@@ -26,7 +26,7 @@
 			<!-- small box -->
 			<div class="small-box bg-green">
 				<div class="inner">
-					<h3>3<sup style="font-size: 20px">%</sup></h3>
+					<h3>{{ \App\Criminals::where('type','criminals')->count() }}<sup style="font-size: 20px"></sup></h3>
 
 					<p>Criminals</p>
 				</div>
@@ -41,7 +41,7 @@
 			<!-- small box -->
 			<div class="small-box bg-yellow">
 				<div class="inner">
-					<h3>4</h3>
+					<h3>{{ \App\Criminals::where('type','fires')->count() }}</h3>
 
 					<p>Fire Accident</p>
 				</div>
@@ -56,7 +56,7 @@
 			<!-- small box -->
 			<div class="small-box bg-red">
 				<div class="inner">
-					<h3>5</h3>
+					<h3>{{ \App\Criminals::where('type','roads')->count() }}</h3>
 
 					<p>Road Accident</p>
 				</div>

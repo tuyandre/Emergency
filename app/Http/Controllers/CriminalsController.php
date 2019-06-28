@@ -69,6 +69,7 @@ class CriminalsController extends Controller
 
 
       $crimi = Criminals::with('Populations')
+         ->where('type','=','criminals')
          ->orderBy('id','desc')
          ->get();
       return response()->json(['criminals' => $crimi], 200);
@@ -89,6 +90,7 @@ class CriminalsController extends Controller
    public function allRoads()
    {
       $crimi = Criminals::with('Populations')
+         ->where('type','=','roads')
          ->orderBy('id','desc')
          ->get();
       return response()->json(['roads' => $crimi], 200);
@@ -97,6 +99,7 @@ class CriminalsController extends Controller
    public function allFires()
    {
       $crimi = Criminals::with('Populations')
+         ->where('type','=','fires')
          ->orderBy('id','desc')
          ->get();
       return response()->json(['fires' => $crimi], 200);

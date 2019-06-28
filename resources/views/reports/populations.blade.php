@@ -26,8 +26,8 @@
 					<div class="box-body" style="">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
-								<form action="#" target="_blank" class="form-horizontal">
-
+								<form action="{{ route('populations.pdf') }}" target="_blank" class="form-horizontal" method="post">
+									@csrf
 									<div class="form-group">
 										<label for="category" class="control-label col-sm-3">Starting Date</label>
 										<div class="col-sm-9">
