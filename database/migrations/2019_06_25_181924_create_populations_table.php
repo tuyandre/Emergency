@@ -20,6 +20,7 @@ class CreatePopulationsTable extends Migration
            $table->string('password');
            $table->string('location')->nullable();
            $table->string('telephone')->nullable();
+           $table->string('fTelephone')->nullable();
             $table->timestamps();
         });
     }

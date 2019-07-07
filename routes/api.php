@@ -13,6 +13,41 @@ use Illuminate\Http\Request;
 |
 */
 
+
+Route::get('/API/population', [
+   'uses' => 'remotellyController@index',
+   'as' => 'apiRegister'
+]);
+
+
+Route::post('/API/populations', [
+   'uses' => 'remotellyController@register',
+   'as' => 'apiRegister'
+]);
+
+Route::post('/API/login', [
+   'uses' => 'remotellyController@Login',
+   'as' => 'apiLogin'
+]);
+
+
+Route::post('/API/criminals', [
+   'uses' => 'remotellyController@criminals',
+   'as' => 'apiCriminals'
+]);
+
+Route::post('/API/getCriminals', [
+   'uses' => 'remotellyController@getCriminal',
+   'as' => 'apigetCriminal'
+]);
+Route::post('/API/history', [
+   'uses' => 'remotellyController@history',
+   'as' => 'history'
+]);
+Route::post('/API/telephone', [
+   'uses' => 'remotellyController@addTelephone',
+   'as' => 'telephone'
+]);
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

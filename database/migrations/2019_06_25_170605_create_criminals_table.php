@@ -1,9 +1,10 @@
 <?php
 
+use Carbon\Traits\Timestamp;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
+use Carbon\Carbon;
 class CreateCriminalsTable extends Migration
 {
     /**
@@ -17,13 +18,15 @@ class CreateCriminalsTable extends Migration
             $table->bigIncrements('id');
            $table->integer('populations_id')->unsigned();
            $table->string('Message')->nullable();
-           $table->string('location')->nullable();
+           $table->string('latitude')->nullable();
+           $table->string('longitude')->nullable();
            $table->string('audio')->nullable();
            $table->string('photo')->nullable();
            $table->string('type')->nullable();
+           $table->integer('status')->default(0);
+           $table->string('date')->default(new Carbon());
+           $table->timestamps();
 
-          // $table->foreign('people_id')->references('id')->on('people');
-            $table->timestamps();
         });
     }
 

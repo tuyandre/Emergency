@@ -33,7 +33,6 @@
 								<tr>
 									<th >name</th>
 									<th >Message</th>
-									<th>Location</th>
 									<th>Actions</th>
 								</tr>
 								</thead>
@@ -75,7 +74,6 @@
 
 					{data: 'populations.name'},
 					{data: 'Message'},
-					{data: 'location'},
 					{
 						data: 'id',
 						render: function (data, type, row) {

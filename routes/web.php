@@ -215,4 +215,6 @@ Route::prefix('admin/')->group(/**
          'uses' => 'ReportsController@PopulationsPdf',
          'as' => 'populationsPdf'
       ]);
+
+
    });

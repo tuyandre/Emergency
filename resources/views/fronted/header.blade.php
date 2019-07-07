@@ -147,7 +147,7 @@
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-fire-extinguisher"></i>
-              <span class="label label-danger">{{ \App\Criminals::where('type','fires')->count() }}</span>
+              <span class="label label-danger">{{ \App\Criminals::where([['type','fires'],['status',0]])->count() }}</span>
             </a>
             <ul class="dropdown-menu">
               <li class="header">You have{{ \App\Criminals::where('type','fires')->count() }} Fire Accident</li>

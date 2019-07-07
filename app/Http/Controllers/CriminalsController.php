@@ -238,6 +238,12 @@ class CriminalsController extends Controller
 
    public function criminalsShow($id)
    {
+
+      $c=Criminals::find($id);
+      $c->status=1;
+      $c->save();
+
+
       $criminals = Criminals::with('Populations')
          ->orderBy('id','desc')
          ->where('id','=',$id)
@@ -252,6 +258,12 @@ class CriminalsController extends Controller
    }
    public function firesShow($id)
    {
+      $f=Criminals::find($id);
+      $f->status=1;
+      $f->save();
+
+
+
       $fires = Criminals::with('Populations')
          ->orderBy('id','desc')
          ->where('id','=',$id)
@@ -267,6 +279,12 @@ class CriminalsController extends Controller
    }
    public function roadShow($id)
    {
+
+      $r=Criminals::find($id);
+      $r->status=1;
+      $r->save();
+
+
       $roads = Criminals::with('Populations')
          ->orderBy('id','desc')
          ->where('id','=',$id)
