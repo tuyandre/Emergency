@@ -45,7 +45,7 @@ Route::post('/API/history', [
    'as' => 'history'
 ]);
 Route::post('/API/telephone', [
-   'uses' => 'remotellyController@addTelephone',
+   'uses' => 'remotellyController@telephone',
    'as' => 'telephone'
 ]);
 Route::middleware('auth:api')->get('/user', function (Request $request) {

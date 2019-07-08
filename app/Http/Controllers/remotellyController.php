@@ -96,4 +96,15 @@ else {
        }
 
     }
+    public function telephone(Request $request){
+       $id=$request['id'];
+       $p=Populations::find($id);
+       $tel=$request['tel'];
+
+       $p->fTelephone=$tel;
+       $p->save();
+
+       return response()->json(['tel' => "ok"], 200);
+
+    }
 }
